@@ -15,17 +15,15 @@ depositButton.addEventListener('click', function () {
   let depositAmount = document.getElementById('deposit-amount').value;
   let depositNumber = parseFloat(depositAmount);
 
-  let currentDeposit = document.getElementById('current-deposit').innerText;
-  let currentDepositNumber = parseFloat(currentDeposit);
-  let totatDeposit = depositNumber + currentDepositNumber;
-
-  document.getElementById('current-deposit').innerText = totatDeposit;
-
-  let currentBalance = document.getElementById('current-balance').innerText;
-  let currentBalanceNumber = parseFloat(currentBalance);
-  let totatBalance = depositNumber + currentBalanceNumber;
-
-  document.getElementById('current-balance').innerText = totatBalance;
+  updateSpanText('current-deposit', depositNumber);
+  updateSpanText('current-balance', depositNumber);
 
   document.getElementById('deposit-amount').value = '';
 });
+
+function updateSpanText(id, depositNumber) {
+  let current = document.getElementById(id).innerText;
+  let currentNumber = parseFloat(current);
+  let totatAmount = depositNumber + currentNumber;
+  document.getElementById(id).innerText = totatAmount;
+}
