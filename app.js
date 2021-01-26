@@ -20,19 +20,6 @@ depositButton.addEventListener('click', function () {
   document.getElementById('deposit-amount').value = '';
 });
 
-function updateSpanText(id, depositNumber) {
-  let current = document.getElementById(id).innerText;
-  let currentNumber = parseFloat(current);
-  let totatAmount = depositNumber + currentNumber;
-  document.getElementById(id).innerText = totatAmount;
-}
-
-function getInputNumber(id) {
-  const amount = document.getElementById(id).value;
-  const withdrawNumber = parseFloat(amount);
-  return withdrawNumber;
-}
-
 // withDraw button event handler
 
 const withdrawButton = document.getElementById('withdraw');
@@ -40,3 +27,20 @@ withdrawButton.addEventListener('click', function () {
   const withdrawNumber = getInputNumber('withdraw-amount');
   console.log(withdrawNumber);
 });
+
+// update span text function
+
+function updateSpanText(id, depositNumber) {
+  let current = document.getElementById(id).innerText;
+  let currentNumber = parseFloat(current);
+  let totatAmount = depositNumber + currentNumber;
+  document.getElementById(id).innerText = totatAmount;
+}
+
+// getinput function
+
+function getInputNumber(id) {
+  const amount = document.getElementById(id).value;
+  const withdrawNumber = parseFloat(amount);
+  return withdrawNumber;
+}
