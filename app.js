@@ -33,10 +33,10 @@ withdrawButton.addEventListener('click', function () {
 
 // update span text function
 
-function updateSpanText(id, depositNumber) {
+function updateSpanText(id, addedNumber) {
   const current = document.getElementById(id).innerText;
   const currentNumber = parseFloat(current);
-  const totatAmount = depositNumber + currentNumber;
+  const totatAmount = addedNumber + currentNumber;
   document.getElementById(id).innerText = totatAmount;
 }
 
