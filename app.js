@@ -1,7 +1,7 @@
 // login button event handler
 
-let loginArea = document.getElementById('login-area');
-let transactionArea = document.getElementById('transaction-area');
+const loginArea = document.getElementById('login-area');
+const transactionArea = document.getElementById('transaction-area');
 const loginButton = document.getElementById('login');
 
 loginButton.addEventListener('click', function () {
@@ -10,7 +10,7 @@ loginButton.addEventListener('click', function () {
 });
 
 // deposit button
-let depositButton = document.getElementById('deposit');
+const depositButton = document.getElementById('deposit');
 depositButton.addEventListener('click', function () {
   const depositNumber = getInputNumber('deposit-amount');
 
@@ -34,9 +34,9 @@ withdrawButton.addEventListener('click', function () {
 // update span text function
 
 function updateSpanText(id, depositNumber) {
-  let current = document.getElementById(id).innerText;
-  let currentNumber = parseFloat(current);
-  let totatAmount = depositNumber + currentNumber;
+  const current = document.getElementById(id).innerText;
+  const currentNumber = parseFloat(current);
+  const totatAmount = depositNumber + currentNumber;
   document.getElementById(id).innerText = totatAmount;
 }
 
